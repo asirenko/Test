@@ -1,0 +1,30 @@
+// This file contains all application-wide Sass mixins
+
+// Breakpoints
+
+$S: 656px //480px
+$M: 960px //768px
+// $L: 1100px
+
+
+// Media queries
+
+=MQ($canvas)
+	@if $canvas == S
+		@media only screen and (min-width: $S)
+			@content
+
+	@else if $canvas == M
+		@media only screen and (min-width: $M)
+			@content
+
+	@else if $canvas == L
+		@media only screen and (min-width: $L)
+			@content
+
+
+// Antialiasing mode font rendering
+
+=font-smoothing
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale

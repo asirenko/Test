@@ -1,0 +1,59 @@
+/* Products Section */
+
+.product_container
+	width: 90%
+	margin: 70px auto
+
+	+MQ(M)
+		max-width: 960px
+
+	&__list
+		text-align: center
+
+		&:last-of-type
+			margin-top: 18px
+
+		&__item
+			display: block
+
+			+MQ(S)
+				display: inline-block
+				width: calc(100% / 960 * 225)
+				margin-right: calc(100% / 960 * 16)
+				margin-bottom: 0
+
+				&:last-of-type
+					margin-right: 0
+
+			&__card
+				border-radius: 8px
+				background-color: $grey
+
+				&__cover
+					display: block
+					width: 100%
+					height: auto
+
+				&__content
+					text-align: center
+					padding: 24px
+
+					+MQ(S)
+						padding: 10px 32px
+
+					&__title
+						font-size: $font-size-title
+						line-height: $line-height-title
+						font-weight: $font-weigh-400
+						+font-smoothing
+
+					&__price
+						padding: 30px 0 6px 0
+						font-size: $font-size-price
+						font-weight: $font-weigh-900
+						+font-smoothing
+
+			&__shadow
+				display: block
+				width: 100%
+				height: auto
